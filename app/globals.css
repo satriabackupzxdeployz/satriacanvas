@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Orbitron:wght@400;600;700;900&display=swap');
+
+:root {
+  --bg: #000000;
+  --surface: #0a0a0a;
+  --surface2: #111111;
+  --border: #1a1a1a;
+  --accent: #f5a623;
+  --accent2: #ff6b00;
+  --gold: #ffd700;
+  --text: #e8e8e8;
+  --muted: #555;
+  --red: #ff3b3b;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Rajdhani', sans-serif;
+  min-height: 100vh;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+::selection { background: transparent; }
+
+img { -webkit-user-drag: none; pointer-events: none; }
+
+@keyframes flicker {
+  0%,100%{opacity:1}50%{opacity:.92}
+}
+@keyframes scanline {
+  0%{transform:translateY(-100%)}100%{transform:translateY(100vh)}
+}
+@keyframes glow-pulse {
+  0%,100%{box-shadow:0 0 8px rgba(245,166,35,0.3)}50%{box-shadow:0 0 20px rgba(245,166,35,0.6)}
+}
+@keyframes spin-in {
+  from{transform:rotate(-4deg) scale(.96);opacity:0}to{transform:rotate(0) scale(1);opacity:1}
+}
+@keyframes fadeUp {
+  from{transform:translateY(16px);opacity:0}to{transform:translateY(0);opacity:1}
+}
+@keyframes shimmer {
+  0%{background-position:-200% center}100%{background-position:200% center}
+}
